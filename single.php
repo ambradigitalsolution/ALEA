@@ -79,6 +79,50 @@ get_header();
                                         <?php the_tags( '', '', '' ); ?>
                                     </div>
                                 <?php endif; ?>
+
+                                <!-- Baca Juga / Related Posts -->
+                                <?php
+                                $categories = get_the_category();
+                                if ( $categories ) :
+                                    $category_ids = array();
+                                    foreach ( $categories as $category ) {
+                                        $category_ids[] = $category->term_id;
+                                    }
+                                    $related_args = array(
+                                        'category__in'   => $category_ids,
+                                        'post__not_in'   => array( get_the_ID() ),
+                                        'posts_per_page' => 3,
+                                        'orderby'        => 'rand',
+                                        'post_status'    => 'publish',
+                                    );
+                                    $related_query = new WP_Query( $related_args );
+                                    if ( $related_query->have_posts() ) :
+                                ?>
+                                <div class="related-posts-section">
+                                    <h3 class="related-posts-title">Baca juga:</h3>
+                                    <div class="related-posts-grid">
+                                        <?php while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+                                        <a href="<?php the_permalink(); ?>" class="related-post-card">
+                                            <div class="related-post-img">
+                                                <?php if ( has_post_thumbnail() ) : ?>
+                                                    <?php the_post_thumbnail( 'medium', array( 'style' => 'width:100%; height:100%; object-fit:cover;' ) ); ?>
+                                                <?php else : ?>
+                                                    <div class="placeholder-img" style="min-height:160px;">🖥️</div>
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="related-post-info">
+                                                <h4><?php the_title(); ?></h4>
+                                                <span class="related-post-date"><?php echo get_the_date(); ?></span>
+                                            </div>
+                                        </a>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                                <?php
+                                    endif;
+                                    wp_reset_postdata();
+                                endif;
+                                ?>
                                 
                                 <?php
                                 // If comments are open or we have at least one comment, load up the comment template.
