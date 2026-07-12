@@ -348,7 +348,7 @@ section { padding:60px 0; scroll-margin-top: 110px; }
 .share-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary); background: #e8f5e9; transition: all 0.3s; }
 .share-icon:hover { background: var(--primary); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(15,157,88,0.2); }
 .single-post-image { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 30px; background: #eee; }
-.single-post-image img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 500px; }
+.single-post-image img { width: 100%; height: auto; display: block; border-radius: 12px; }
 .single-post-content { font-size: 1.05rem; line-height: 1.8; color: #444; }
 .single-post-content p { margin-bottom: 20px; }
 .single-post-content h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 30px 0 15px; }
