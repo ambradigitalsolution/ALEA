@@ -3,7 +3,7 @@ Theme Name: Alea Computer
 Theme URI: http://localhost/lpalea
 Author: User
 Description: Custom WordPress theme for Alea Computer, responsive and SEO friendly.
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 Text Domain: aleacomputer
 */
@@ -350,9 +350,25 @@ section { padding:60px 0; scroll-margin-top: 110px; }
 .single-post-content h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 30px 0 15px; }
 .single-post-content ul, .single-post-content ol { margin-bottom: 20px; padding-left: 20px; }
 .single-post-content li { margin-bottom: 10px; }
-.single-post-tags { display: flex; gap: 10px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eaeaea; }
-.single-tag { padding: 6px 15px; background: #eee; border-radius: 20px; font-size: 0.85rem; color: #555; text-decoration: none; transition: all 0.3s; }
-.single-tag:hover { background: var(--primary); color: #fff; }
+.single-post-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eaeaea; }
+.single-post-tags a { padding: 6px 15px; background: #eee; border-radius: 20px; font-size: 0.85rem; color: #555; text-decoration: none; transition: all 0.3s; }
+.single-post-tags a:hover { background: var(--primary); color: #fff; }
+
+/* Comments */
+#comments { margin-top: 50px; padding-top: 30px; border-top: 2px solid #f1f1f1; }
+#comments .comments-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 30px; }
+.comment-list { list-style: none; padding: 0; margin: 0; }
+.comment-list li { margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #f1f1f1; }
+.comment-body { display: flex; gap: 15px; }
+.comment-author img { border-radius: 50%; }
+.comment-meta { font-size: 0.85rem; color: #888; margin-bottom: 10px; }
+.comment-meta a { color: var(--text); font-weight: 600; text-decoration: none; }
+.reply a { font-size: 0.85rem; color: var(--primary); font-weight: 600; }
+.comment-respond { margin-top: 40px; background: #f9f9f9; padding: 30px; border-radius: 12px; }
+.comment-reply-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+.comment-form-comment textarea, .comment-form-author input, .comment-form-email input, .comment-form-url input { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; margin-bottom: 15px; }
+.form-submit input[type="submit"] { background: var(--primary); color: #fff; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+.form-submit input[type="submit"]:hover { background: var(--primary-dark); }
 
 @media(max-width: 767px) {
     .single-article { padding: 25px; }
