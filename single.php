@@ -31,7 +31,7 @@ get_header();
                                     <div class="single-post-author-box">
                                         <div class="author-info">
                                             <div class="author-avatar">
-                                                <span class="author-initial"><?php echo mb_strtoupper( mb_substr( get_the_author(), 0, 1 ) ); ?></span>
+                                                <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                                             </div>
                                             <div class="author-meta">
                                                 <span class="author-name"><?php the_author(); ?></span>
