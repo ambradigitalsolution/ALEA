@@ -44,4 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Fix native search input 'x' clear button getting stuck
+    const searchInputs = document.querySelectorAll('input[type="search"]');
+    searchInputs.forEach(function(input) {
+        // The 'search' event fires when the 'x' button is clicked in Chrome/Edge
+        input.addEventListener('search', function() {
+            if (this.value === '') {
+                // When cleared, redirect back to the home/blog page
+                window.location.href = window.location.origin + '/'; 
+            }
+        });
+    });
 });
