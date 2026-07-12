@@ -20,9 +20,10 @@ get_header();
                             <article id="post-<?php the_ID(); ?>" <?php post_class('single-article'); ?>>
                                 <!-- Breadcrumb -->
                                 <div class="single-breadcrumb">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>">Beranda</a> / 
+                                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 5px; vertical-align: middle; color: var(--primary);"><path d="M11 21h-1l1-7H7.5c-.88 0-1.25-1.12-.55-1.66l9-7h1l-1 7h3.5c.88 0 1.25 1.12.55 1.66l-9 7z"/></svg>
+                                    <a href="<?php echo esc_url(home_url('/')); ?>">Alea</a> / 
                                     <a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a> / 
-                                    <span class="current"><?php $cats = get_the_category(); echo $cats ? esc_html($cats[0]->name) : ''; ?></span>
+                                    <span class="current" style="font-weight: 700; color: #111;"><?php $cats = get_the_category(); echo $cats ? esc_html($cats[0]->name) : ''; ?></span>
                                 </div>
 
                                 <div class="single-post-header">
