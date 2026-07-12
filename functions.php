@@ -55,3 +55,16 @@ function aleacomputer_scripts() {
     wp_enqueue_script( 'aleacomputer-main', get_template_directory_uri() . '/assets/js/main.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'aleacomputer_scripts' );
+
+/**
+ * Calculate estimated reading time
+ */
+function aleacomputer_reading_time() {
+    $content = get_post_field( 'post_content', get_the_ID() );
+    $word_count = str_word_count( strip_tags( $content ) );
+    $readingtime = ceil($word_count / 200);
+    if ($readingtime == 0) {
+        $readingtime = 1;
+    }
+    return $readingtime . ' mnt baca';
+}
