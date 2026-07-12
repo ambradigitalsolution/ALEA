@@ -31,7 +31,7 @@ get_header();
                                     <div class="single-post-author-box">
                                         <div class="author-info">
                                             <div class="author-avatar">
-                                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
+                                                <span class="author-initial"><?php echo mb_strtoupper( mb_substr( get_the_author(), 0, 1 ) ); ?></span>
                                             </div>
                                             <div class="author-meta">
                                                 <span class="author-name"><?php the_author(); ?></span>
