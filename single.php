@@ -22,7 +22,7 @@ get_header();
                                 <div class="single-breadcrumb">
                                     <a href="<?php echo esc_url(home_url('/')); ?>">Beranda</a> / 
                                     <a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a> / 
-                                    <span class="current"><?php the_title(); ?></span>
+                                    <span class="current"><?php $cats = get_the_category(); echo $cats ? esc_html($cats[0]->name) : ''; ?></span>
                                 </div>
 
                                 <div class="single-post-header">
