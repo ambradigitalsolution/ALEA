@@ -280,8 +280,8 @@ section { padding:60px 0; scroll-margin-top: 110px; }
 .blog-sidebar { width: 350px; flex-shrink: 0; }
 @media(max-width: 991px) { .blog-sidebar { width: 100%; } }
 
-.blog-hero-card { position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); background: #000; display: block; }
-.hero-bg-img { width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; }
+.blog-hero-card { position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); background: #000; display: block; aspect-ratio: 16/9; max-height: 500px; }
+.hero-bg-img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.0) 100%); pointer-events: none; }
 .hero-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; color: #fff; z-index: 2; }
 .hero-meta { font-size: 0.9rem; color: #ddd; margin-bottom: 10px; display: flex; gap: 10px; align-items: center; }
@@ -348,7 +348,7 @@ section { padding:60px 0; scroll-margin-top: 110px; }
 .share-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary); background: #e8f5e9; transition: all 0.3s; }
 .share-icon:hover { background: var(--primary); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(15,157,88,0.2); }
 .single-post-image { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 30px; background: #eee; }
-.single-post-image img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.single-post-image img { width: 100%; aspect-ratio: 16/9; display: block; border-radius: 12px; object-fit: cover; }
 .single-post-content { font-size: 1.05rem; line-height: 1.8; color: #444; }
 .single-post-content p { margin-bottom: 20px; }
 .single-post-content h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 30px 0 15px; }
