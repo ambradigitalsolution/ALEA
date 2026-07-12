@@ -26,7 +26,8 @@ get_header();
                                     $first_post = false;
                                     $bg_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/img/hero-tech.png';
                             ?>
-                                <article class="blog-hero-card" style="background-image: url('<?php echo esc_url($bg_image); ?>');">
+                                <article class="blog-hero-card">
+                                    <img src="<?php echo esc_url($bg_image); ?>" alt="Hero Image" class="hero-bg-img">
                                     <div class="hero-overlay"></div>
                                     <div class="hero-content">
                                         <div class="hero-meta">
