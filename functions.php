@@ -68,3 +68,14 @@ function aleacomputer_reading_time() {
     }
     return $readingtime . ' mnt baca';
 }
+
+/**
+ * Filter search results to only show posts (exclude pages like Sample Page)
+ */
+function aleacomputer_search_filter($query) {
+    if ($query->is_search && !is_admin() && $query->is_main_query()) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'aleacomputer_search_filter');
