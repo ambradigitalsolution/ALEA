@@ -395,6 +395,6 @@ section { padding:60px 0; scroll-margin-top: 110px; }
 }
 
 /* Blog Post Content Links */
-.single-post-content a { color: var(--primary); text-decoration: underline; font-weight: 600; transition: color 0.3s; }
-.single-post-content a:hover { color: #0b3b1f; }
-
+.single-post-content a { color: var(--primary) !important; text-decoration: underline !important; font-weight: 600 !important; transition: color 0.3s; }
+.single-post-content p a, .single-post-content strong a, .single-post-content span a { color: var(--primary) !important; text-decoration: underline !important; }
+.single-post-content a:hover, .single-post-content p a:hover { color: #0b3b1f !important; }
