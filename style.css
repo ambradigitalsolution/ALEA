@@ -393,3 +393,8 @@ section { padding:60px 0; scroll-margin-top: 110px; }
     .single-article { padding: 25px; }
     .single-post-title { font-size: 1.8rem; }
 }
+
+/* Blog Post Content Links */
+.single-post-content a { color: var(--primary); text-decoration: underline; font-weight: 600; transition: color 0.3s; }
+.single-post-content a:hover { color: #0b3b1f; }
+
