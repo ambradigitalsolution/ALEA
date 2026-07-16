@@ -25,7 +25,7 @@ get_header();
                     <span style="display: inline-block; background-color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 20px; box-shadow: 0 0 15px rgba(15,157,88,0.5);">#1 SOLUSI ASET IT BEKAS</span>
                     
                     <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); line-height: 1.2; margin-bottom: 20px;">
-                        BELI LAPTOP, KOMPUTER,<br>
+                        BELI LAPTOP KOMPUTER<br>
                         <span style="color: #4ade80; text-shadow: 0 0 20px rgba(15,157,88,0.4);">& PERANGKAT IT BEKAS</span>
                     </h1>
                     
